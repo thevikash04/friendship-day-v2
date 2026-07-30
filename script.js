@@ -114,3 +114,28 @@ function startGallery(){
   },8000);
 
 }
+/* ===== Floating Hearts ===== */
+
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = ["💛","❤️","💖","💕","🤍"];
+
+    heart.innerHTML = hearts[Math.floor(Math.random()*hearts.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize = (18 + Math.random()*18) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+
+}
+
+setInterval(createHeart,700);
