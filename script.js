@@ -165,7 +165,7 @@ function createPetal(){
 
     petal.className = "petal";
 
-    petal.innerHTML = "🌹";
+    petal.innerHTML = "🌸";
 
     petal.style.left = Math.random()*window.innerWidth + "px";
 
@@ -179,4 +179,4 @@ function createPetal(){
 
 }
 
-setInterval(createPetal,1200);
+setInterval(createPetal,600);
