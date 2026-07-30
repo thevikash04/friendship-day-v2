@@ -99,3 +99,27 @@ width:240px;
 height:330px;
 }
 }
+/* ===== Floating Hearts ===== */
+
+.heart{
+    position: fixed;
+    bottom: -50px;
+    font-size: 22px;
+    animation: floatHeart 8s linear forwards;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes floatHeart{
+
+0%{
+transform: translateY(0) scale(1);
+opacity:1;
+}
+
+100%{
+transform: translateY(-110vh) scale(1.6);
+opacity:0;
+}
+
+}
