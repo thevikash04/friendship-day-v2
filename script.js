@@ -159,4 +159,24 @@ function firework() {
         fw.remove();
     },1000);
 }
+function createPetal(){
 
+    const petal = document.createElement("div");
+
+    petal.className = "petal";
+
+    petal.innerHTML = "🌹";
+
+    petal.style.left = Math.random()*window.innerWidth + "px";
+
+    petal.style.fontSize = (18 + Math.random()*18) + "px";
+
+    document.body.appendChild(petal);
+
+    setTimeout(()=>{
+        petal.remove();
+    },8000);
+
+}
+
+setInterval(createPetal,1200);
