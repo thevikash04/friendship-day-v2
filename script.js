@@ -131,3 +131,36 @@ function createHeart() {
 window.onload = function () {
     setInterval(createHeart, 500);
 };
+function firework() {
+
+    const colors = [
+        "#ff0000",
+        "#ffff00",
+        "#00ff00",
+        "#00ffff",
+        "#ff00ff",
+        "#ffffff",
+        "#ff8800"
+    ];
+
+    const fw = document.createElement("div");
+    fw.className = "firework";
+
+    fw.style.background =
+        colors[Math.floor(Math.random()*colors.length)];
+
+    fw.style.left = Math.random()*window.innerWidth + "px";
+    fw.style.top = Math.random()*window.innerHeight + "px";
+
+    document.body.appendChild(fw);
+
+    setTimeout(()=>{
+        fw.remove();
+    },1000);
+}
+
+setInterval(()=>{
+    if(finalPage.style.display==="flex"){
+        firework();
+    }
+},300);
