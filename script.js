@@ -39,7 +39,13 @@ let page = 0;
 
 startBtn.onclick = () => {
 
-  music.play().catch(() => {});
+  music.currentTime = 0;
+
+music.play().then(() => {
+    console.log("Music Started");
+}).catch(err => {
+    console.log(err);
+});
 
   home.style.display = "none";
   letter.style.display = "flex";
