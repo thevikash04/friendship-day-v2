@@ -110,6 +110,7 @@ function startGallery(){
 
     gallery.style.display = "none";
     finalPage.style.display = "flex";
+    setInterval(firework,300);
 
   },8000);
 
@@ -159,8 +160,3 @@ function firework() {
     },1000);
 }
 
-setInterval(()=>{
-    if(finalPage.style.display==="flex"){
-        firework();
-    }
-},300);
