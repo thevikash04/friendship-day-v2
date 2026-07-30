@@ -114,28 +114,20 @@ function startGallery(){
   },8000);
 
 }
-/* ===== Floating Hearts ===== */
-
-function createHeart(){
-
+function createHeart() {
     const heart = document.createElement("div");
-
+    heart.innerHTML = "❤️";
     heart.className = "heart";
 
-    const hearts = ["💛","❤️","💖","💕","🤍"];
-
-    heart.innerHTML = hearts[Math.floor(Math.random()*hearts.length)];
-
-    heart.style.left = Math.random() * 100 + "vw";
-
-    heart.style.fontSize = (18 + Math.random()*18) + "px";
+    heart.style.left = Math.random() * window.innerWidth + "px";
 
     document.body.appendChild(heart);
 
-    setTimeout(()=>{
+    setTimeout(() => {
         heart.remove();
-    },8000);
-
+    }, 5000);
 }
 
-setInterval(createHeart,700);
+window.onload = function () {
+    setInterval(createHeart, 500);
+};
