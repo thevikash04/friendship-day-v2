@@ -8,7 +8,7 @@ const startBtn = document.getElementById("startBtn");
 const nextBtn = document.getElementById("nextBtn");
 const typing = document.getElementById("typing");
 const photo = document.getElementById("photo");
-
+const music = document.getElementById("bgMusic");
 window.addEventListener("load", () => {
   setTimeout(() => {
     loading.style.display = "none";
@@ -38,9 +38,14 @@ Forever Best Friends ❤️
 let page = 0;
 
 startBtn.onclick = () => {
+
+  music.play().catch(() => {});
+
   home.style.display = "none";
   letter.style.display = "flex";
+
   typeWriter(pages[0]);
+
 };
 
 function typeWriter(text){
