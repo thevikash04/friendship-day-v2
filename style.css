@@ -215,17 +215,28 @@ opacity:0;
     font-size:18px;
 }
 .footer{
-    width:100%;
+    margin-top:30px;
     text-align:center;
-    padding:15px 10px;
-    font-size:15px;
-    color:#ffffff;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(8px);
-    margin-top:20px;
-    border-top:1px solid rgba(255,255,255,0.2);
+    font-size:16px;
+    color:#ffd54f;
+    font-weight:bold;
+    letter-spacing:1px;
+    text-shadow:0 0 10px rgba(255,213,79,.8);
+    animation:footerGlow 2s infinite alternate;
 }
 
 .footer strong{
-    color:#ffd54f;
+    color:#ffffff;
+}
+
+@keyframes footerGlow{
+    from{
+        opacity:.7;
+        transform:scale(1);
+    }
+    to{
+        opacity:1;
+        transform:scale(1.05);
+        text-shadow:0 0 20px #ffd54f;
+    }
 }
