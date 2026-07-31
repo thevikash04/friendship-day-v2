@@ -186,3 +186,13 @@ function createPetal(){
 }
 
 setInterval(createPetal,600);
+const giftBox = document.getElementById("giftBox");
+const giftText = document.getElementById("giftText");
+
+if(giftBox){
+    giftBox.onclick = () => {
+        giftBox.classList.add("open");
+        giftBox.innerHTML = "🎉";
+        giftText.classList.add("show");
+    };
+}
