@@ -240,3 +240,44 @@ opacity:0;
         text-shadow:0 0 20px #ffd54f;
     }
 }
+#giftBox{
+    font-size:70px;
+    cursor:pointer;
+    text-align:center;
+    margin:20px auto;
+    transition:.5s;
+    animation:bounce 1.2s infinite;
+}
+
+#giftBox.open{
+    transform:scale(1.2) rotate(20deg);
+}
+
+#giftText{
+    display:none;
+    text-align:center;
+    font-size:22px;
+    color:#fff;
+    margin-top:15px;
+    animation:pop .8s;
+}
+
+#giftText.show{
+    display:block;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
+
+@keyframes pop{
+    from{
+        opacity:0;
+        transform:scale(.3);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
