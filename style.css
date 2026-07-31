@@ -214,3 +214,18 @@ opacity:0;
     color:white;
     font-size:18px;
 }
+.footer{
+    width:100%;
+    text-align:center;
+    padding:15px 10px;
+    font-size:15px;
+    color:#ffffff;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(8px);
+    margin-top:20px;
+    border-top:1px solid rgba(255,255,255,0.2);
+}
+
+.footer strong{
+    color:#ffd54f;
+}
