@@ -39,18 +39,24 @@ let page = 0;
 
 startBtn.onclick = () => {
 
-  music.currentTime = 0;
+    startBtn.classList.add("open");
 
-music.play().then(() => {
-    console.log("Music Started");
-}).catch(err => {
-    console.log(err);
-});
+    setTimeout(() => {
 
-  home.style.display = "none";
-  letter.style.display = "flex";
+        music.currentTime = 0;
 
-  typeWriter(pages[0]);
+        music.play().then(() => {
+            console.log("Music Started");
+        }).catch(err => {
+            console.log(err);
+        });
+
+        home.style.display = "none";
+        letter.style.display = "flex";
+
+        typeWriter(pages[0]);
+
+    },700);
 
 };
 
